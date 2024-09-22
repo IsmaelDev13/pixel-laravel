@@ -20,8 +20,10 @@
                 Tags
             </x-section-heading>
             <div class="mt-6 space-x-1">
-                <x-tag>Tag</x-tag>
-                <x-tag>Tag</x-tag>
+              @foreach ($tags as $tag)
+              
+              <x-tag :$tag/>
+              @endforeach
             </div>
         </section>
         <section>
@@ -29,9 +31,10 @@
                 Recent Jobs
             </x-section-heading>
             <div class="mt-6 space-y-6">
-                <x-job-card-wide/>
-                <x-job-card-wide/>
-                <x-job-card-wide/>
+              @foreach ($jobs as $job)
+              
+              <x-job-card-wide :$job/>
+              @endforeach 
             </div>
 
         </section>
